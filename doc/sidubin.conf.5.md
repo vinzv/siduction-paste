@@ -1,15 +1,15 @@
 ---
-title: PRIVATEBIN.CONF
-header: Privatebin Manual
+title: SIDUPASTE.CONF
+header: Sidupaste Manual
 footer: 1.0.1
 date: Jan 20, 2022
 section: 1
 ---
 # NAME
-**privatebin.conf** – privatebin CLI configuration file.
+**sidupaste.conf** – sidupaste CLI configuration file.
 
 # DESCRIPTION
-The privatebin(1) command line interface create paste to an PrivateBin
+The sidupaste(1) command line interface create paste to an PrivateBin
 instance configured in the **config.json**.
 
 # FORMAT
@@ -59,13 +59,13 @@ instance configured in the **config.json**.
 : The basic auth password.
 
 # EXAMPLES
-Minimal privatebin configuration file:
+Minimal sidupaste configuration file:
 
     {
         "bin": [
             {
                 "name": "", // default
-                "host": "https://privatebin.net"
+                "host": "https://paste.siduction.org"
             }
         ]
     }
@@ -93,8 +93,8 @@ A bit more complete configuration file:
     }
 
 # FILES
-*~/.config/privatebin/config.json*
-: Default location of the privatebin configuration. The file has to be
+*~/.config/sidupaste/config.json*
+: Default location of the sidupaste configuration. The file has to be
   created manually as it is not installed with a standard installation.
 
 # AUTHORS

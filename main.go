@@ -27,7 +27,7 @@ import (
 	"path"
 	"strings"
 
-	"github.com/gearnode/privatebin/privatebin"
+	"github.com/siduction/sidupaste/sidupaste"
 )
 
 type AuthCfg struct {
@@ -115,7 +115,7 @@ func loadCfgFile(path string) (*Cfg, error) {
 }
 
 func main() {
-	cfgPath := flag.String("cfg-file", "", "the path of the configuration file (default \"~/.config/privatebin/config.json\")")
+	cfgPath := flag.String("cfg-file", "", "the path of the configuration file (default \"~/.config/sidupaste/config.json\")")
 	binName := flag.String("bin", "", "the privatebin name to use")
 	expire := flag.String("expire", "", "the time to live of the paste")
 	openDiscussion := flag.Bool("open-discussion", false, "enable discussion on the paste")
@@ -136,7 +136,7 @@ func main() {
 			fail("cannot get user home directory: %v", err)
 		}
 
-		*cfgPath = path.Join(homeDir, ".config", "privatebin", "config.json")
+		*cfgPath = path.Join(homeDir, ".config", "sidupaste", "config.json")
 	}
 
 	cfg, err := loadCfgFile(*cfgPath)
@@ -155,7 +155,7 @@ func main() {
 			binCfg.Name, binCfg.Host)
 	}
 
-	client := privatebin.NewClient(uri,
+	client := sidupaste.NewClient(uri,
 		binCfg.Auth.Username,
 		binCfg.Auth.Password)
 

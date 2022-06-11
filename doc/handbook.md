@@ -1,7 +1,7 @@
 # Introduction
-This document is the handbook for the privatebin command line
+This document is the handbook for the sidupaste command line
 interface.
 
 Documentation is now available as man pages:
-- [privatebin(1)](privatebin.1.md)
-- [privatebin.conf(5)](privatebin.conf.5.md)
+- [sidupaste(1)](sidupaste.1.md)
+- [sidupaste.conf(5)](sidupaste.conf.5.md)

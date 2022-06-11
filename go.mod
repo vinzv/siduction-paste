@@ -1,4 +1,4 @@
-module github.com/gearnode/privatebin
+module github.com/siduction/sidupaste
 
 go 1.13
 
